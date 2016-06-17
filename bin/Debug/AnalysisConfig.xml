@@ -1,0 +1,9 @@
+<AnalysisConfig>
+  <FivecoldBound>9</FivecoldBound>
+  <AnalysisQiShu>8</AnalysisQiShu>
+  <FourcoldBound>9</FourcoldBound>
+  <ThreecoldBound>9</ThreecoldBound>
+  <TwocoldBound>9</TwocoldBound>
+  <StartIndexNum>0</StartIndexNum>
+  <EndIndexNum>10</EndIndexNum>
+</AnalysisConfig>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<lottry>
+    <!--彩票信息-->
+  <LottryNum Snum ="0">
+    <Numdate>20165160</Numdate>
+    <Num>2455</Num>
+  </LottryNum>
+
+  <LottryNum Snum ="1">
+    <Numdate>20165161</Numdate>
+    <Num>4524</Num>
+  </LottryNum>
+
+  <LottryNum Snum="2">
+    <Numdate>20165162</Numdate>
+    <Num>4558</Num>
+  </LottryNum>
+
+  <LottryNum Snum ="3">
+    <Numdate>20165163</Numdate>
+    <Num>7555</Num>
+  </LottryNum>
+  
+</lottry>

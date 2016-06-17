@@ -1,0 +1,29 @@
+﻿
+
+
+
+  http://tubiao.17mcp.com/Sby/HaomaHebingZs-30.html
+  匹配2013-02-21类型的年份
+  ([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8])))
+  匹配期号
+  160[0-9]{1,}
+  160[0-9]{5,}
+  匹配开奖号码
+  width="25">[0-9]{1,1}
+  <td width="25">[0-9]{1,1}</td><td width="25">[0-9]{1,1}</td><td width="25">[0-9]{1,1}</td><td width="25">[0-9]{1,1}</td>
+
+  class="kyt8">[0-9]{1,1}</td>
+  class="kyt8 ky_thm"><span>[0-9]{1,1}</span></td>
+
+  <td width=\"25\" class=\"kyt8\">[0-9]{1,1}</td> <td width=\"25\"class=\"kyt8\">[0-9]{1,1}</td><td width=\"25\" class=\"kyt8\">[0-9]{1,1}</td><td width=\"25\"class=\"kyt8 ky_thm\">[0-9]{1,1}</td>
+
+  
+  <td width="25" class="kyt8"><span>[0-9]{1,1}</span></td>
+                    <td width="25"  class="kyt8"><span>[0-9]{1,1}</span></td>
+                    <td width="25" class="kyt8"><span>[0-9]{1,1}</span></td>
+                    <td width="25"  class="kyt8 ky_thm"><span>[0-9]{1,1}</span></td>
+  
+  <td width="25" class="kyt8">[0-9]{1,1}</td><td width="25"class="kyt8">[0-9]{1,1}</td><td width="25"class="kyt8">[0-9]{1,1}</td><td width="25"class="kyt8 ky_thm">[0-9]{1,1}</td>
+
+
+<td width="25" bgcolor="#C1E0FF">[0-9]{1,1}</td><td width="25" bgcolor="#C1E0FF">[0-9]{1,1}</td><td width="25" bgcolor="#C1E0FF">[0-9]{1,1}</td><td width="25" bgcolor="#C1E0FF">[0-9]{1,1}</td>

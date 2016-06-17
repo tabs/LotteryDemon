@@ -1,0 +1,97 @@
+﻿ 
+    <UserControl x:Name="NumTrendWindow" x:Class="预彩精灵.Pages.NumTrend"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1200" MouseEnter="NumTrendWindow_MouseEnter" Loaded="NumTrendWindow_Loaded"  >
+    <UserControl.Resources>
+        
+        <DataTemplate x:Key ="mutipleTable_Header" >
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  >
+                <Border>
+                    <Label Content="邮箱" Width="340" HorizontalContentAlignment="Center"/>
+                </Border>
+                <Border >
+                    <GridSplitter BorderBrush="Black" />
+                </Border>
+                <StackPanel Width="340" Orientation="Horizontal">
+                    <Label Content="邮箱1" Width="170" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <GridSplitter BorderBrush="Black"  BorderThickness="1"/>
+                    <Label Content="邮箱2" Width="170" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate  x:Key="mutipleTable_Columns"  >
+            <StackPanel Width="Auto" Height="Auto" Orientation="Horizontal" >
+                <Border>
+                    <TextBlock Margin="1,0,1,0" Width="170" Text="{Binding ea}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+                <Border>
+                    <GridSplitter Background="AliceBlue" BorderThickness="1" BorderBrush="Black" Margin="0,0,0,0"/>
+                </Border>
+                <Border>
+                    <TextBlock Margin="1,0,1,0" Width="170" Text="{Binding eb}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+            </StackPanel>
+        </DataTemplate>
+        
+        <Style x:Key="ContentCenterStyle" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        <Style x:Key="ColumnHeaderCenterStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+
+    
+    </UserControl.Resources>
+        
+        <Grid Style="{StaticResource ContentRoot}">
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <CheckBox x:Name="AChBox" Content="统计A" Width="80" Margin="20,0,0,0" IsChecked="True"/>
+            <CheckBox x:Name="BChBox" Content="统计B" Width="80" Margin="20,0,0,0" IsChecked="True"/>
+            <CheckBox x:Name="CChBox" Content="统计C" Width="80" Margin="20,0,0,0" IsChecked="True" />
+            <CheckBox x:Name="DChBix" Content="统计D" Width="80" Margin="20,0,0,0" IsChecked="True" />
+        </StackPanel>
+        <DataGrid  x:Name="ReTable" IsReadOnly="true"  ItemsSource="{Binding}"  Margin=" 10,10,0,0"  AutoGenerateColumns="False"   GridLinesVisibility="All" Grid.Row="1">
+            <!-- <DataGrid.Style>
+                <Style TargetType="{x:Type DataGrid}">
+                    <Setter Property="HorizontalGridLinesBrush" Value="Blue"/>
+                    <Setter Property="VerticalGridLinesBrush" Value="Blue"/>
+                </Style>
+            </DataGrid.Style>
+            -->           
+            <DataGrid.CellStyle>
+                <Style x:Name="dgc" TargetType="DataGridCell">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="VerticalContentAlignment"   Value="Center"/>
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn HeaderStyle="{StaticResource ColumnHeaderCenterStyle}"  ElementStyle="{StaticResource ContentCenterStyle}"  Header="编号" Width="80" Binding="{Binding Snum,Mode=TwoWay}"/>
+                <DataGridTextColumn HeaderStyle="{StaticResource ColumnHeaderCenterStyle}"  ElementStyle="{StaticResource ContentCenterStyle}" Header="日期" Width="80" Binding="{Binding Numdate,Mode=TwoWay}"/>
+                <DataGridTextColumn HeaderStyle="{StaticResource ColumnHeaderCenterStyle}"  ElementStyle="{StaticResource ContentCenterStyle}" Header="本期号码" Width="100" Binding="{Binding Num,Mode=TwoWay}"/>
+                <DataGridTextColumn HeaderStyle="{StaticResource ColumnHeaderCenterStyle}"  ElementStyle="{StaticResource ContentCenterStyle}" Header="1" Width="50" Binding="{Binding eleone}"/>
+                <DataGridTextColumn HeaderStyle="{StaticResource ColumnHeaderCenterStyle}"  ElementStyle="{StaticResource ContentCenterStyle}" Header="2" Width="50" Binding="{Binding eletwo}"/>
+                <DataGridTextColumn HeaderStyle="{StaticResource ColumnHeaderCenterStyle}"  ElementStyle="{StaticResource ContentCenterStyle}" Header="3" Width="50" Binding="{Binding elethree}"/>
+                <DataGridTextColumn HeaderStyle="{StaticResource ColumnHeaderCenterStyle}"  ElementStyle="{StaticResource ContentCenterStyle}" Header="4" Width="50" Binding="{Binding elefour}"/>
+                <DataGridTextColumn HeaderStyle="{StaticResource ColumnHeaderCenterStyle}"  ElementStyle="{StaticResource ContentCenterStyle}" Header="5" Width="50" Binding="{Binding elefive}"/>
+                <DataGridTextColumn HeaderStyle="{StaticResource ColumnHeaderCenterStyle}"  ElementStyle="{StaticResource ContentCenterStyle}" Header="6" Width="50" Binding="{Binding elesix}"/>
+                <DataGridTextColumn HeaderStyle="{StaticResource ColumnHeaderCenterStyle}"  ElementStyle="{StaticResource ContentCenterStyle}" Header="7" Width="50" Binding="{Binding eleseven}"/>
+                <DataGridTextColumn HeaderStyle="{StaticResource ColumnHeaderCenterStyle}"  ElementStyle="{StaticResource ContentCenterStyle}" Header="8" Width="50" Binding="{Binding eleeight}"/>
+                <!--<DataGridTemplateColumn HeaderTemplate="{ StaticResource  mutipleTable_Header }" CellTemplate="{StaticResource mutipleTable_Columns }" />-->
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

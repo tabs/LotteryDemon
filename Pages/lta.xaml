@@ -1,0 +1,149 @@
+﻿<UserControl x:Class="预彩精灵.Pages.lta"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style x:Key="ContentCenterStyle" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        <Style x:Key="ColumnHeaderCenterStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Style="{StaticResource ContentRoot}" ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MaxWidth="130"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <StackPanel  MinWidth="100" VerticalAlignment="Top" Orientation="Vertical" >
+                <Button x:Name="StartCulcBtn" Content="开始分析" Width="100" Margin="10,0,0,0" HorizontalAlignment="Left" Click="StartCulc_Click" />
+                <Button x:Name="StopCulcBtn"  Content="停止分析" Width="100" Margin="10,10,0,0" HorizontalAlignment="Left" Click="StopCulc_Click"  />
+                <Button x:Name="SetupBtn"  Content="分析设置" Width="100" Margin="10,10,0,0" HorizontalAlignment="Left" Click="SetupBtn_Click"  />
+            </StackPanel>
+            <TreeView x:Name="TreeUi" Width="150" Height="300" Margin="0,10,0,0" >
+                <TreeViewItem Header="[A]综合走势">
+                    <TreeViewItem Header="两个数的走势">
+                        <TreeViewItem x:Name="AtwoNumTrend0" Header="附加得0" Selected="AtwoNumTrend0_Selected"/>
+                        <TreeViewItem x:Name="AtwoNumTrend9" Header="附加得9" Selected="AtwoNumTrend9_Selected"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="三个数的走势">
+                        <TreeViewItem x:Name="AthreeNumTrend0" Header="附加得0" Selected="AthreeNumTrend0_Selected"/>
+                        <TreeViewItem x:Name="AthreeNumTrend9" Header="附加得9" Selected="AthreeNumTrend9_Selected"/>
+                        <TreeViewItem x:Name="AthreeNumTrend09" Header="得0得9" Selected="AthreeNumTrend09_Selected"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="四个数的走势">
+                        <TreeViewItem x:Name="AfourNumTrend0" Header="附加得0" Selected="AfourNumTrend0_Selected"/>
+                        <TreeViewItem x:Name="AfourNumTrend9" Header="附加得9" Selected="AfourNumTrend9_Selected"/>
+                        <TreeViewItem x:Name="AfourNumTrend09" Header="得0得9" Selected="AfourNumTrend09_Selected"/>
+                    </TreeViewItem>
+                    <TreeViewItem x:Name="AfiveNumTrend" Header="五个数的走势" Selected="AfiveNumTrend_Selected"/>
+                </TreeViewItem>
+                <TreeViewItem Header="[B]综合走势">
+                    <TreeViewItem Header="两个数的走势">
+                        <TreeViewItem x:Name="BtwoNumTrend0" Header="附加得0" Selected="BtwoNumTrend0_Selected"/>
+                        <TreeViewItem x:Name="BtwoNumTrend9" Header="附加得9" Selected="BtwoNumTrend9_Selected"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="三个数的走势">
+                        <TreeViewItem x:Name="BthreeNumTrend0" Header="附加得0" Selected="BthreeNumTrend0_Selected"/>
+                        <TreeViewItem x:Name="BthreeNumTrend9" Header="附加得9" Selected="BthreeNumTrend9_Selected"/>
+                        <TreeViewItem x:Name="BthreeNumTrend09" Header="得0得9" Selected="BthreeNumTrend09_Selected"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="四个数的走势">
+                        <TreeViewItem x:Name="BfourNumTrend0" Header="附加得0" Selected="BfourNumTrend0_Selected"/>
+                        <TreeViewItem x:Name="BfourNumTrend9" Header="附加得9" Selected="BfourNumTrend9_Selected"/>
+                        <TreeViewItem x:Name="BfourNumTrend09" Header="得0得9" Selected="BfourNumTrend09_Selected"/>
+                    </TreeViewItem>
+                    <TreeViewItem x:Name="BfiveNumTrend" Header="五个数的走势" Selected="BfiveNumTrend_Selected"/>
+                </TreeViewItem>
+                <TreeViewItem Header="[C]综合走势">
+                    <TreeViewItem Header="两个数的走势">
+                        <TreeViewItem x:Name="CtwoNumTrend0" Header="附加得0" Selected="CtwoNumTrend0_Selected"/>
+                        <TreeViewItem x:Name="CtwoNumTrend9" Header="附加得9" Selected="CtwoNumTrend9_Selected"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="三个数的走势">
+                        <TreeViewItem x:Name="CthreeNumTrend0" Header="附加得0" Selected="CthreeNumTrend0_Selected"/>
+                        <TreeViewItem x:Name="CthreeNumTrend9" Header="附加得9" Selected="CthreeNumTrend9_Selected"/>
+                        <TreeViewItem x:Name="CthreeNumTrend09" Header="得0得9" Selected="CthreeNumTrend09_Selected"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="四个数的走势">
+                        <TreeViewItem x:Name="CfourNumTrend0" Header="附加得0" Selected="CfourNumTrend0_Selected"/>
+                        <TreeViewItem x:Name="CfourNumTrend9" Header="附加得9" Selected="CfourNumTrend9_Selected"/>
+                        <TreeViewItem x:Name="CfourNumTrend09" Header="得0得9" Selected="CfourNumTrend09_Selected"/>
+                    </TreeViewItem>
+                    <TreeViewItem x:Name="CfiveNumTrend" Header="五个数的走势" Selected="CfiveNumTrend_Selected"/>
+                </TreeViewItem>
+                <TreeViewItem Header="[D]综合走势">
+                    <TreeViewItem Header="两个数的走势">
+                        <TreeViewItem x:Name="DtwoNumTrend0" Header="附加得0" Selected="DtwoNumTrend0_Selected"/>
+                        <TreeViewItem x:Name="DtwoNumTrend9" Header="附加得9" Selected="DtwoNumTrend9_Selected"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="三个数的走势">
+                        <TreeViewItem x:Name="DthreeNumTrend0" Header="附加得0" Selected="DthreeNumTrend0_Selected"/>
+                        <TreeViewItem x:Name="DthreeNumTrend9" Header="附加得9" Selected="DthreeNumTrend9_Selected"/>
+                        <TreeViewItem x:Name="DthreeNumTrend09" Header="得0得9" Selected="DthreeNumTrend09_Selected"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="四个数的走势">
+                        <TreeViewItem x:Name="DfourNumTrend0" Header="附加得0" Selected="DfourNumTrend0_Selected"/>
+                        <TreeViewItem x:Name="DfourNumTrend9" Header="附加得9" Selected="DfourNumTrend9_Selected"/>
+                        <TreeViewItem x:Name="DfourNumTrend09" Header="得0得9" Selected="DfourNumTrend09_Selected"/>
+                    </TreeViewItem>
+                    <TreeViewItem x:Name="DfiveNumTrend" Header="五个数的走势" Selected="DfiveNumTrend_Selected"/>
+                </TreeViewItem>
+            </TreeView>
+        </StackPanel>
+        <StackPanel MinWidth="200" Margin="10,0,0,0" VerticalAlignment="Top" Orientation="Vertical" Grid.Column="2">
+            <ProgressBar x:Name="prb" Width="800" Height="10" VerticalAlignment="Top" Margin="0,0,0,0" IsEnabled="True"  IsIndeterminate="False"/>
+        </StackPanel>
+        <DataGrid  x:Name="ReslutTable" IsReadOnly="true"  Margin=" 0,5,0,0" ItemsSource="{Binding}" AutoGenerateColumns="False"   Grid.Column="2" GridLinesVisibility="All" >
+                <!-- <DataGrid.Style>
+                <Style TargetType="{x:Type DataGrid}">
+                    <Setter Property="HorizontalGridLinesBrush" Value="Blue"/>
+                    <Setter Property="VerticalGridLinesBrush" Value="Blue"/>
+                </Style>
+            </DataGrid.Style>
+            -->
+
+                <DataGrid.CellStyle>
+                    <Style x:Name="dgb" TargetType="DataGridCell">
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                    </Style>
+                </DataGrid.CellStyle>
+
+
+                <DataGrid.Columns>
+                <DataGridTextColumn HeaderStyle="{StaticResource ColumnHeaderCenterStyle}" ElementStyle="{StaticResource ContentCenterStyle}" Header="算法公式" Width="100" Binding="{Binding AlgorithmFormula,Mode=TwoWay}"/>
+
+                <DataGridTextColumn HeaderStyle="{StaticResource ColumnHeaderCenterStyle}" ElementStyle="{StaticResource ContentCenterStyle}" Header="区间" Width="80" Binding="{Binding KuangNum,Mode=TwoWay}"/>
+
+                <DataGridTextColumn HeaderStyle="{StaticResource ColumnHeaderCenterStyle}" ElementStyle="{StaticResource ContentCenterStyle}" Header="结果区间" Width="100" Binding="{Binding ResultNum,Mode=TwoWay}"/>
+
+                <DataGridTextColumn HeaderStyle="{StaticResource ColumnHeaderCenterStyle}" ElementStyle="{StaticResource ContentCenterStyle}" Header="连续次数" Width="100" Binding="{Binding ColdTime,Mode=TwoWay}"/>
+
+
+                <!--
+                    <DataGridTextColumn Header="A" Width="80" Binding="{ Binding elea,Mode=TwoWay}">
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="B" Width="80" Binding="{Binding eleb,Mode=TwoWay}">
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="C" Width="100" Binding="{Binding elec,Mode=TwoWay}">
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="D" Width="100" Binding="{Binding eled,Mode=TwoWay}">
+                    </DataGridTextColumn>
+                    -->
+
+                </DataGrid.Columns>
+            </DataGrid>
+
+        
+    </Grid>
+</UserControl>
